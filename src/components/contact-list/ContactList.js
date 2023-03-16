@@ -18,7 +18,7 @@ const ContactList = () => {
       {contacts.length !== 0 ? (
         contacts.map(contact => (
           <li className={css.listItem_contact} key={contact.id}>            
-              <p><span className={css.name}>{contact.name}: </span>{contact.phone} </p>             
+              <p><span className={css.name}>{contact.name}: </span>{contact.number} </p>             
             
             <button
               className={css.bttn_contactList}

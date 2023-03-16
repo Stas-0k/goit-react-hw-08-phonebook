@@ -1,9 +1,10 @@
 import css from './contact-form.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts } from '../../redux/selectors';
-import {addContact} from '../../redux/operations'
+import { addContact } from '../../redux/operations'
 
-function ContactForm() {
+
+export function ContactForm() {
  
   const contacts = useSelector(getContacts);
   const dispatch = useDispatch();
@@ -22,7 +23,7 @@ function ContactForm() {
       alert(`${form.name.value} is already in contacts`);
       evt.currentTarget.reset();
     } else {
-      dispatch(addContact({name: form.name.value,phone: form.number.value }));
+      dispatch(addContact({name: form.name.value,number: form.number.value }));
       evt.currentTarget.reset();
     }
     
@@ -52,7 +53,8 @@ function ContactForm() {
         Add contact
       </button>
     </form>
+  
   );
 }
 
-export default ContactForm;
+
