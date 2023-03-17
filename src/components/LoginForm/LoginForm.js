@@ -24,7 +24,7 @@ export const LoginForm = () => {
 
   return (
     <div>
-      <Text fontSize='xl' color='teal'>Welcome to Login page!</Text>
+      <Text fontSize='xl' color='teal' mt={5}>Welcome to Login page!</Text>
 
       <form autoComplete="off" onSubmit={handleSubmit}>
         <label>
@@ -34,6 +34,7 @@ export const LoginForm = () => {
             placeholder="E-mail"
             type="email"
             name="email"
+            mb={5}
           ></Input>
         </label>
 
@@ -48,7 +49,7 @@ export const LoginForm = () => {
         </label>
 
         <Button colorScheme="teal" variant="outline"
-           type="submit">Log in
+           type="submit" mt={10}>Log in
         </Button>
       </form>
     </div>

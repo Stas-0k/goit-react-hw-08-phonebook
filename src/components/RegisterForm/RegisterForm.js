@@ -21,7 +21,7 @@ export const RegisterForm = () => {
 
   return (
     <div>
-      <Text fontSize='xl' color='teal'>Welcome to registration form!</Text>
+      <Text fontSize='xl' color='teal' mt={5}>Welcome to registration form!</Text>
 
       <form autoComplete="off" onSubmit={handleSubmit}>
         <label>
@@ -30,6 +30,7 @@ export const RegisterForm = () => {
             placeholder="Name"
             type="text"
             name="name"
+            mb={5}
           ></Input>
         </label>
 
@@ -39,6 +40,7 @@ export const RegisterForm = () => {
             placeholder="E-mail"
             type="email"
             name="email"
+            mb={5}
           ></Input>
         </label>
 
@@ -52,7 +54,7 @@ export const RegisterForm = () => {
         </label>
 
         <Button colorScheme="teal" variant="outline"
-           type="submit">Register
+           type="submit" mt={10}>Register
         </Button>
       </form>
     </div>
