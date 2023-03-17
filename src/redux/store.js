@@ -2,6 +2,7 @@ import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import { contactsReducer } from './contactsSlice';
 import { filterReducer } from './filterSlice';
 import { authReducer } from '../redux/auth/slice';
+import { persistStore } from 'redux-persist';
 
 import storage from 'redux-persist/lib/storage';
 import {
@@ -39,3 +40,4 @@ export const store = configureStore({
   devTools: process.env.NODE_ENV === 'development',
 });
 
+export const persistor = persistStore(store);
